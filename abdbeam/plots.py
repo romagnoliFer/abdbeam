@@ -104,7 +104,7 @@ def plot_section(section, segment_coord=False, thickness=True, mid_plane=True,
     fig.set_size_inches(figsize)
     fig.set_dpi(dpi)
     plt.ion()
-    plt.show()
+    plt.show(block=True)#without block activated dialog automatically closes after showing.
 
 
 def _plot_section_to_ax(section, ax, segment_coord=True, thickness=True,
