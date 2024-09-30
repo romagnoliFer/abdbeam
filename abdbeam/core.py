@@ -216,6 +216,18 @@ class Section:
         msg.append(np.array_str(self.w))
         for line in msg:
             print(line)
+          
+   def Geom_props_value(self):
+     """return geometrical properties"""
+        EIyy = self.p_c[1,1]
+        EIzz = self.p_c[2,2]
+        EIyz = self.p_c[1,2]
+        EImax = 0.5*(EIyy + EIzz) + (0.25*(EIyy-EIzz)**2 + EIyz**2)**0.5
+        EImin = 0.5*(EIyy + EIzz) - (0.25*(EIyy-EIzz)**2 + EIyz**2)**0.     
+        EA=self.p_c[0,0]
+        GJ = self.p_c[3,3]
+        Angle = self.principal_axis_angle
+        return EIyy,EIzz,EIyz,EImax,EImin,EA,GJ,Angle      
 
 
     def calculate_properties(self):
