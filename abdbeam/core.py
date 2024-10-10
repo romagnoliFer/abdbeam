@@ -217,8 +217,8 @@ class Section:
         for line in msg:
             print(line)
           
-   def Geom_props_value(self):
-     """return geometrical properties"""
+    def Geom_props_value(self):
+        """return geometrical properties"""
         EIyy = self.p_c[1,1]
         EIzz = self.p_c[2,2]
         EIyz = self.p_c[1,2]
