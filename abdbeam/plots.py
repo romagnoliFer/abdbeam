@@ -365,7 +365,7 @@ def plot_section_loads(section, load_id, int_load_list=['Nx', 'Nxy', 'Mx',
     if len(int_load_list) > 1:
         plt.subplots_adjust(top=0.85)
     plt.ion()
-    plt.show()
+    plt.show(block=True)
 
 
 def _plot_internal_load_curves(section, fig, ax, load_id, load, thickness=True,
