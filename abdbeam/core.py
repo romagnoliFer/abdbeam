@@ -223,7 +223,7 @@ class Section:
         EIzz = self.p_c[2,2]
         EIyz = self.p_c[1,2]
         EImax = 0.5*(EIyy + EIzz) + (0.25*(EIyy-EIzz)**2 + EIyz**2)**0.5
-        EImin = 0.5*(EIyy + EIzz) - (0.25*(EIyy-EIzz)**2 + EIyz**2)**0.     
+        EImin = 0.5*(EIyy + EIzz) - (0.25*(EIyy-EIzz)**2 + EIyz**2)**0.5     
         EA=self.p_c[0,0]
         GJ = self.p_c[3,3]
         Angle = self.principal_axis_angle
